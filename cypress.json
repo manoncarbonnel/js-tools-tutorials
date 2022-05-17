@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://127.0.0.1",
+  "chromeWebSecurity": false,
+  "downloadsFolder": "tests/cypress/assets/downloads",
+  "experimentalSourceRewriting": true,
+  "fixturesFolder": "tests/cypress/fixtures",
+  "ignoreTestFiles": [],
+  "integrationFolder": "tests/cypress/tests",
+  "pluginsFile": "tests/cypress/config/plugins/index.js",
+  "projectId": "application-manager",
+  "screenshotOnRunFailure": false,
+  "screenshotsFolder": "reports/cypress/assets/screenshots",
+  "supportFile": "tests/cypress/config/support/index.js",
+  "testFiles": "**/*.{feature,features}",
+  "video": false,
+  "videosFolder": "reports/cypress/assets/videos"
+}

@@ -1,0 +1,28 @@
+###> PhpStorm ###
+.idea
+###< PhpStorm ###
+
+###> Environment ###
+.env
+*.local
+###< Environment ###
+
+###> Tests ###
+/reports/*/*
+!/reports/*/.gitkeep
+###< Tests ###
+
+###> LOGS ###
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+###< LOGS ###
+
+###> Yarn ###
+dist
+node_modules
+.yarn-cache
+.yarnrc
+###< Yarn ###

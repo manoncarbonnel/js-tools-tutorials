@@ -1,0 +1,73 @@
+{
+  "name": "js-tools-tutorials",
+  "version": "1.0.0",
+  "description": "Markdown tutorials for JavaScript tools (static analysis, tests, and more)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prepare": "husky install .husky",
+    "eslint": "eslint . --ext .js,.vue -f html -o reports/eslint/report.html",
+    "eslint:fix": "eslint . --ext .js,.vue --fix",
+    "prettier": "prettier -c .",
+    "prettier:fix": "prettier -w .",
+    "cypress:report": "node cucumber-html-report.js",
+    "cypress:run": "cypress run --env fileConfig='cypress/config/config.dev.json' && npm run cypress:report",
+    "cypress:open": "cypress open --browser=chrome --env fileConfig='cypress/config/config.dev.json' && npm run cypress:report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manoncarbonnel/js-tools-tutorials.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Manon Carbonnel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manoncarbonnel/js-tools-tutorials/issues"
+  },
+  "homepage": "https://github.com/manoncarbonnel/js-tools-tutorials#readme",
+  "dependencies": {
+    "@vue/test-utils": "^2.0.0-rc.21",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "c8": "^7.11.3",
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^9.6.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "deepmerge": "^4.2.2",
+    "eslint": "^8.15.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "happy-dom": "^3.2.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^9.5.0",
+    "prettier": "^2.4.1",
+    "vite": "^2.9.9",
+    "vitest": "^0.12.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "commonPath": "step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber",
+      "filePrefix": "",
+      "fileSuffix": ""
+    },
+    "nonGlobalStepBaseDir": "tests/cypress",
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "tests/cypress/step_definitions"
+  }
+}

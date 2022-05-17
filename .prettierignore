@@ -1,0 +1,7 @@
+# Ignore artifacts:
+.husky
+docs
+dist
+node_modules
+public
+reports
